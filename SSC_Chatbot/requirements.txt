@@ -1,0 +1,10 @@
+langchain
+langchain-community
+faiss-cpu
+pandas
+openpyxl
+fastapi
+uvicorn
+openai
+python-dotenv
+google-genai

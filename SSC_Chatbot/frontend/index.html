@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SSC Applicant Support Assistant</title>
+
+<link
+    rel="stylesheet"
+    href="/static/style.css"
+>
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <!-- ============================= -->
+    <!-- LEFT SIDEBAR -->
+    <!-- ============================= -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+
+            <button
+                id="newChatButton"
+                class="new-chat-button"
+            >
+                + New Chat
+            </button>
+
+        </div>
+
+        <div class="history-title">
+            Previous Chats
+        </div>
+
+        <!-- Scrollable chat history -->
+
+        <div
+            id="chatHistory"
+            class="chat-history"
+        >
+        </div>
+
+        <div class="sidebar-footer">
+
+            <button
+                id="clearHistoryButton"
+                class="clear-history-button"
+            >
+                Clear History
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- ============================= -->
+    <!-- MAIN CHAT AREA -->
+    <!-- ============================= -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="top-header">
+
+            <button
+                id="menuButton"
+                class="menu-button"
+            >
+                ☰
+            </button>
+
+            <div>
+                <h1>SSC Applicant Support Assistant</h1>
+
+                <p>
+                    AI-powered assistance
+                </p>
+            </div>
+
+        </header>
+
+
+        <!-- ============================= -->
+        <!-- CHAT AREA -->
+        <!-- ============================= -->
+
+        <section
+            id="chatContainer"
+            class="chat-container"
+        >
+
+            <!-- Welcome screen -->
+
+            <div
+                id="welcomeScreen"
+                class="welcome-screen"
+            >
+
+                <h2>
+                    How can I help you with SSC?
+                </h2>
+
+                <p>
+                    Ask questions related to SSC examinations,
+                    eligibility, applications and other available FAQs.
+                </p>
+
+
+                <!-- Exam Selector -->
+
+                <div class="exam-section">
+
+                    <label for="examSelect">
+                        Select Examination
+                    </label>
+
+                    <select id="examSelect">
+
+                        <option value="">
+                            All SSC Exams
+                        </option>
+
+                        <option value="CGL">
+                            SSC CGL
+                        </option>
+
+                        <option value="CHSL">
+                            SSC CHSL
+                        </option>
+
+                        <option value="MTS">
+                            SSC MTS
+                        </option>
+
+                        <option value="CPO">
+                            SSC CPO
+                        </option>
+
+                        <option value="JE">
+                            SSC JE
+                        </option>
+
+                        <option value="GD">
+                            SSC GD
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Suggested Questions -->
+
+                <div class="suggestions">
+
+                    <button
+                        class="suggestion"
+                        data-question="What is the age limit for CGL?"
+                    >
+                        What is the age limit for CGL?
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-question="What qualification is required for CHSL?"
+                    >
+                        What qualification is required for CHSL?
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-question="What is the eligibility criteria for MTS?"
+                    >
+                        What is the eligibility criteria for MTS?
+                    </button>
+
+
+                    <button
+                        class="suggestion"
+                        data-question="Tell me about SSC CPO eligibility."
+                    >
+                        Tell me about SSC CPO eligibility.
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- Messages will appear here -->
+
+            <div
+                id="messages"
+                class="messages"
+            >
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- INPUT AREA -->
+        <!-- ============================= -->
+
+        <div class="input-area">
+
+            <div class="input-wrapper">
+
+                <textarea
+                    id="questionInput"
+                    placeholder="Ask anything about SSC..."
+                    rows="1"
+                    maxlength="1000"
+                ></textarea>
+
+                <button
+                    id="sendButton"
+                    class="send-button"
+                >
+                    Send
+                </button>
+
+            </div>
+
+            <div class="disclaimer">
+
+                Responses are generated from the available SSC FAQ
+                knowledge base. Verify important information from
+                official SSC notifications.
+
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
